@@ -44,7 +44,8 @@ class HistoryPage extends StatelessWidget {
         title: Theme(
           data: ThemeData(
             brightness: Brightness.dark,
-            accentColor: Colors.white,
+            colorScheme:
+                ColorScheme.fromSwatch().copyWith(secondary: Colors.white),
           ),
           child: const _SearchTextField(),
         ),
@@ -116,7 +117,7 @@ class _HistoryListView extends ConsumerWidget {
         ),
         child: Text(
           value,
-          style: textTheme.bodyText2,
+          style: textTheme.bodyMedium,
         ),
       ),
     );
